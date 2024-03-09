@@ -1,0 +1,94 @@
+body {
+  max-width: 1600px;
+  margin: auto;
+}
+
+.container {
+  margin: 30px auto;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  background-color: #9964c7;
+  background-image: linear-gradient(135deg, #9964c7 0%, #6316bb 100%);
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.company-info input {
+  padding-bottom: 5px;
+  margin-bottom:30px;
+  border: none;
+  font-size: 1rem;
+  border-bottom: 1px solid #ffff;
+  background-color: transparent;
+  color: #ffff;
+}
+
+::placeholder {
+  color: #adadad;
+}
+
+.company-info button {
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+button {
+  margin-right: 5px;
+  width: 120px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+button:hover {
+  background-color: #ae81e7;
+  color: #ffff;
+}
+
+.flex-row-container {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.customer-list-container {
+  font-size: 1.25rem;
+  border-radius: 25px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  color: #ffff;
+  width: 250px;
+  background-color: #9964c7;
+  background-image: linear-gradient(135deg, #9964c7 0%, #6316bb 100%);
+}
+
+.info > span {
+  color: black;
+  font-size: .9rem;
+  font-style: italic;
+}
+
+.info > p {
+  margin-top: 0;
+}
+
+.delete-btn:hover {
+  background-color: rgb(252,95,95);
+}
