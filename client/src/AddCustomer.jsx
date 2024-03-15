@@ -10,8 +10,6 @@ const [customerData, setCustomerData] = useState({
     website: ''
 })
 
-const [dummyData, setDummyData] = useState([])
-
 const handleFormChange = (e) => {
     const {name, value} = e.target
     setCustomerData(prevState => {
@@ -69,34 +67,7 @@ const handleFormSubmit = (e) => {
                     <button>Submit</button>
                 </div>
             </form>
-            <div className="flex-row-container">
-                {dummyData.map(customer => (
-                            <div className="customer-list-container">
-                                <div className="info">
-                                    <span>Company Name:</span>
-                                    <p>{customer.companyName}</p>
-                                </div>
-                                <div className="info">
-                                    <span>Phone Number:</span>
-                                    <p>{customer.phoneNumber}</p>
-                                </div>
-                                <div className="info">
-                                    <span>Address:</span>
-                                    <p>{customer.address}</p>
-                                </div>
-                                <div className="info">
-                                    <span>Website:</span>
-                                    <p>{customer.website}</p>
-                                </div>
-                                <div>
-                                    <button>Update</button>
-                                    <button className="delete-btn">Delete</button>
-                                </div>
-                            </div>
-                        ))
-
-                        }
-            </div>
+            
         </div>
     )
 }

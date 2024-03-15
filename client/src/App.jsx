@@ -1,13 +1,31 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import AddCustomer from './AddCustomer'
+import Customer from './Customer'
+import axios from 'axios'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [customerData, setCustomerData] = useState([])
+
+  useEffect(() => {
+    const fetchCustomers = async() => {
+      try{
+        const res = await axios.get('http://localhost:5174/customers')
+        setCustomerData(res.data)
+      }
+      catch(err) {
+        console.log(err)
+      }
+    }
+    fetchCustomers()
+  }, [])
+
+
 
   return (
     <>
      <AddCustomer />
+     <Customer customerData={customerData}/>
     </>
   )
 }
