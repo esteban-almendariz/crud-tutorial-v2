@@ -1,4 +1,5 @@
 import { useState } from "react"
+import axios from 'axios'
 
 
 const AddCustomer = () => {
@@ -20,15 +21,16 @@ const handleFormChange = (e) => {
 
 }
 
-const handleFormSubmit = (e) => {
+const handleFormSubmit = async(e) => {
     e.preventDefault()
-    
-    setDummyData(prevState => {
-        return [
-            ...prevState, customerData
-        ]
-    })
-    console.log(dummyData)
+   try {
+        await axios.post('http://localhost:5174/create', customerData)
+        console.log('new customer sent')
+        window.location.reload()
+   }
+   catch(err) {
+    console.log(err)
+   }
 }
 
     return (
